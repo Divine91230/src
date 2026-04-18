@@ -1,0 +1,125 @@
+.strategy-v2-hero,
+.strategy-v2-section {
+  margin-bottom: 18px;
+}
+
+.strategy-v2-hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.strategy-v2-hero h2 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  letter-spacing: -0.03em;
+}
+
+.strategy-v2-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.strategy-v2-kpis {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.strategy-v2-kpi {
+  display: grid;
+  gap: 6px;
+}
+
+.strategy-v2-kpi strong {
+  color: var(--muted);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.strategy-v2-kpi span {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.strategy-v2-two-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.strategy-v2-reading {
+  display: grid;
+  gap: 12px;
+}
+
+.strategy-v2-reading p,
+.strategy-v2-summary {
+  margin: 0;
+  line-height: 1.68;
+}
+
+.strategy-v2-envelope-grid,
+.strategy-v2-existing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.strategy-v2-envelope-card,
+.strategy-v2-existing-card {
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(255,255,255,0.58);
+  padding: 18px;
+}
+
+.strategy-v2-envelope-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.strategy-v2-envelope-head h3 {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+}
+
+.strategy-v2-steps {
+  margin: 0;
+  padding-left: 22px;
+  display: grid;
+  gap: 12px;
+  line-height: 1.65;
+}
+
+@media (max-width: 1100px) {
+  .strategy-v2-kpis,
+  .strategy-v2-two-columns,
+  .strategy-v2-envelope-grid,
+  .strategy-v2-existing-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .strategy-v2-hero,
+  .strategy-v2-envelope-head {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .strategy-v2-badges {
+    justify-content: flex-start;
+  }
+}

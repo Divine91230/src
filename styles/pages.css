@@ -1,0 +1,441 @@
+/* ═══════════════════════════════════════════════════════════════
+   DCP PATRIMOINE — SIDEBAR FOOTER & EXTRAS
+   À ajouter à la fin de design-system.css
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── SIDEBAR FOOTER ─────────────────────────────────────────── */
+.sidebar-footer {
+  margin-top: auto;
+  padding: var(--space-5) var(--space-6) 0;
+  border-top: 1px solid var(--sidebar-line);
+  padding-top: var(--space-5);
+}
+
+.sidebar-footer-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.80);
+  margin-bottom: 2px;
+}
+
+.sidebar-footer-role {
+  font-size: 11px;
+  color: var(--sidebar-text-muted);
+  letter-spacing: 0.04em;
+}
+
+/* ─── FOLLOW-UP PAGE ─────────────────────────────────────────── */
+.followup-page {
+  animation: fadeUpPage 0.4s var(--ease-out) both;
+  display: grid;
+  gap: var(--space-6);
+}
+
+/* ─── ANALYSIS PAGE ──────────────────────────────────────────── */
+.analysis-block {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ─── DISCOVERY PAGE ─────────────────────────────────────────── */
+.discovery-form-section {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--space-5);
+}
+
+.discovery-form-section h3 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--ink-900);
+  margin-bottom: var(--space-5);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--line);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4) var(--space-6);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+/* ─── SECTION NAV (discovery tabs) ──────────────────────────── */
+.section-nav {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-bottom: 2px;
+}
+
+.section-nav::-webkit-scrollbar { display: none; }
+
+.section-nav-item {
+  flex-shrink: 0;
+  padding: 8px 16px;
+  border-radius: var(--r-md);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--ink-500);
+  transition: all var(--t-fast) var(--ease-out);
+  font-family: var(--font-body);
+}
+
+.section-nav-item:hover {
+  background: var(--cream-200);
+  color: var(--ink-900);
+}
+
+.section-nav-item.active {
+  background: var(--surface);
+  border-color: var(--gold-200);
+  color: var(--gold-600);
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+}
+
+/* ─── RECOMMENDATIONS PAGE ───────────────────────────────────── */
+.reco-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--t-base) var(--ease-out);
+}
+
+.reco-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--gold-200);
+}
+
+.reco-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+}
+
+.reco-title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--ink-900);
+}
+
+/* ─── REPORTS PAGE ───────────────────────────────────────────── */
+.report-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid var(--line-2);
+  gap: var(--space-4);
+  transition: background var(--t-fast);
+}
+
+.report-row:last-child { border-bottom: none; }
+.report-row:hover { background: var(--gold-50); }
+
+.report-row-title {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ink-900);
+  margin-bottom: 2px;
+}
+
+.report-row-meta {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ─── ENVELOPES PAGE ─────────────────────────────────────────── */
+.envelope-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--t-base) var(--ease-out);
+}
+
+.envelope-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--gold-200);
+}
+
+.envelope-card-header {
+  padding: var(--space-5) var(--space-6);
+  background: var(--cream-100);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.envelope-card-body {
+  padding: var(--space-5) var(--space-6);
+}
+
+/* ─── STRATEGY PAGE ──────────────────────────────────────────── */
+.strategy-allocation-bar {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--cream-200);
+  overflow: hidden;
+  margin-top: var(--space-2);
+}
+
+.strategy-allocation-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--gold-300), var(--gold-500));
+  transition: width 0.6s var(--ease-out);
+}
+
+/* ─── CLIENTS PAGE ───────────────────────────────────────────── */
+.clients-filters {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink-600);
+  transition: all var(--t-fast) var(--ease-out);
+  font-family: var(--font-body);
+}
+
+.filter-btn:hover {
+  border-color: var(--gold-200);
+  background: var(--gold-50);
+  color: var(--gold-600);
+}
+
+.filter-btn.active {
+  background: var(--gold-100);
+  border-color: var(--gold-300);
+  color: var(--gold-600);
+}
+
+.search-input-wrap {
+  position: relative;
+  flex: 1;
+  max-width: 380px;
+}
+
+.search-input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted);
+  font-size: 14px;
+  pointer-events: none;
+}
+
+.search-input-wrap input {
+  padding-left: 36px;
+}
+
+/* ─── TASKS PAGE ─────────────────────────────────────────────── */
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid var(--line-2);
+  transition: background var(--t-fast);
+}
+
+.task-item:hover { background: var(--gold-50); }
+.task-item:last-child { border-bottom: none; }
+
+.task-checkbox {
+  width: 18px;
+  height: 18px;
+  border-radius: var(--r-sm);
+  border: 1.5px solid var(--line);
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: all var(--t-fast) var(--ease-out);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface);
+}
+
+.task-checkbox:hover {
+  border-color: var(--gold-300);
+  background: var(--gold-50);
+}
+
+.task-checkbox.done {
+  background: var(--gold-300);
+  border-color: var(--gold-400);
+  color: #1c1a15;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.task-title {
+  flex: 1;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--ink-800);
+}
+
+.task-title.done {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+/* ─── SIMULATOR PAGES ────────────────────────────────────────── */
+.sim-result-card {
+  background: linear-gradient(135deg, var(--gold-50) 0%, #ffffff 100%);
+  border: 1px solid var(--gold-200);
+  border-radius: var(--r-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-gold);
+}
+
+.sim-result-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-600);
+  margin-bottom: var(--space-2);
+}
+
+.sim-result-value {
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--ink-900);
+}
+
+/* ─── SETTINGS PAGE ──────────────────────────────────────────── */
+.settings-section {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--space-5);
+}
+
+.settings-section-header {
+  padding: var(--space-5) var(--space-6);
+  border-bottom: 1px solid var(--line);
+  background: var(--cream-100);
+}
+
+.settings-section-header h3 {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ink-900);
+}
+
+.settings-section-body {
+  padding: var(--space-6);
+}
+
+.settings-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--line-2);
+  gap: var(--space-4);
+}
+
+.settings-row:last-child { border-bottom: none; }
+
+.settings-row-label {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--ink-800);
+}
+
+.settings-row-desc {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+/* ─── COMPLIANCE PAGE ────────────────────────────────────────── */
+.complaint-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: var(--space-5);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  transition: all var(--t-fast) var(--ease-out);
+}
+
+.complaint-card:hover {
+  border-color: var(--gold-200);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ─── SCENARIOS PAGE ─────────────────────────────────────────── */
+.scenario-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--t-base) var(--ease-out);
+}
+
+.scenario-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--gold-200);
+  transform: translateY(-2px);
+}
+
+.scenario-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  background: var(--gold-100);
+  border: 1px solid var(--gold-200);
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--gold-600);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-3);
+}

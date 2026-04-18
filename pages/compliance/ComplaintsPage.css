@@ -1,0 +1,52 @@
+.complaints-create-card,
+.complaints-list-card {
+  margin-bottom: 18px;
+}
+
+.complaints-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 14px;
+}
+
+.complaints-list {
+  display: grid;
+  gap: 12px;
+}
+
+.complaint-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: rgba(255,255,255,0.62);
+  padding: 16px;
+}
+
+.complaint-meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.complaint-actions {
+  min-width: 180px;
+}
+
+@media (max-width: 940px) {
+  .complaints-actions {
+    justify-content: stretch;
+  }
+
+  .complaint-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .complaint-actions {
+    min-width: 0;
+  }
+}

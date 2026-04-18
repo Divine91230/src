@@ -1,0 +1,234 @@
+
+.reports-summary,
+.reports-deviation-card,
+.reports-freshness-card,
+.reports-audit-card {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.reports-summary-main {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.reports-summary-main h2 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  letter-spacing: -0.03em;
+}
+
+.reports-summary-main p {
+  margin: 0;
+  max-width: 760px;
+}
+
+.reports-summary-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.reports-metrics {
+  margin-bottom: 18px;
+}
+
+.reports-two-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.reports-bottom-grid {
+  align-items: start;
+}
+
+.reports-list {
+  margin: 0;
+  padding-left: 22px;
+  display: grid;
+  gap: 12px;
+  color: var(--text);
+  line-height: 1.65;
+}
+
+.reports-implementation-card,
+.reports-envelopes-card {
+  margin-bottom: 18px;
+}
+
+.reports-vigilance-list {
+  padding-left: 20px;
+}
+
+.reports-envelope-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.reports-envelope-item {
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(255,255,255,0.56);
+  padding: 18px;
+}
+
+.reports-envelope-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.reports-envelope-head h3 {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+}
+
+.reports-contract-box {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255,255,255,0.62);
+  padding: 14px;
+  margin-bottom: 14px;
+}
+
+.reports-contract-label {
+  color: var(--muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.reports-contract-name {
+  color: var(--text);
+  font-weight: 700;
+  line-height: 1.45;
+  margin-bottom: 4px;
+}
+
+.reports-contract-carrier,
+.reports-inline-note {
+  color: var(--muted);
+  line-height: 1.55;
+  font-size: 14px;
+}
+
+.reports-envelopes-table {
+  overflow: hidden;
+}
+
+.reports-freshness-list,
+.reports-audit-list {
+  display: grid;
+  gap: 10px;
+}
+
+.reports-freshness-item,
+.reports-audit-item {
+  display: grid;
+  gap: 4px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.62);
+}
+
+.reports-freshness-item.ok strong {
+  color: var(--success);
+}
+
+.reports-freshness-item.attention strong {
+  color: var(--warning);
+}
+
+.reports-freshness-item.warning strong {
+  color: var(--danger);
+}
+
+.reports-deviation-card.warning {
+  border-color: rgba(184,137,63,0.24);
+  background: rgba(184,137,63,0.08);
+}
+
+.reports-deviation-card.ok {
+  border-color: rgba(76,154,113,0.24);
+  background: rgba(76,154,113,0.08);
+}
+
+.reports-deviation-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.reports-deviation-item {
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.62);
+}
+
+.reports-deviation-label {
+  color: var(--muted);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.reports-deviation-value {
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.reports-deviation-form {
+  display: grid;
+  gap: 14px;
+}
+
+.reports-deviation-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 1180px) {
+  .reports-two-columns,
+  .reports-envelope-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 940px) {
+  .reports-summary-main,
+  .reports-envelope-head {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .reports-summary-badges {
+    justify-content: flex-start;
+  }
+
+  .reports-deviation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reports-deviation-actions {
+    justify-content: stretch;
+  }
+}

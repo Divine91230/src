@@ -1,0 +1,134 @@
+.envelopes-v2-hero,
+.envelopes-v2-section {
+  margin-bottom: 18px;
+}
+
+.envelopes-v2-hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.envelopes-v2-hero h2 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  letter-spacing: -0.03em;
+}
+
+.envelopes-v2-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.envelopes-v2-kpis {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.envelopes-v2-kpi {
+  display: grid;
+  gap: 6px;
+}
+
+.envelopes-v2-kpi strong {
+  color: var(--muted);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.envelopes-v2-kpi span {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.envelopes-v2-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.envelopes-v2-card {
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(255,255,255,0.58);
+  padding: 18px;
+}
+
+.envelopes-v2-card-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.envelopes-v2-card-head h3 {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+}
+
+.envelopes-v2-rationale {
+  margin: 0 0 14px;
+  color: var(--text);
+  line-height: 1.65;
+}
+
+.envelopes-v2-two-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.envelopes-v2-existing-list {
+  display: grid;
+  gap: 10px;
+}
+
+.envelopes-v2-existing-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255,255,255,0.58);
+  padding: 14px 16px;
+}
+
+.envelopes-v2-steps {
+  margin: 0;
+  padding-left: 22px;
+  display: grid;
+  gap: 12px;
+  line-height: 1.65;
+}
+
+@media (max-width: 1100px) {
+  .envelopes-v2-grid,
+  .envelopes-v2-two-columns,
+  .envelopes-v2-kpis {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .envelopes-v2-hero,
+  .envelopes-v2-card-head,
+  .envelopes-v2-existing-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .envelopes-v2-badges {
+    justify-content: flex-start;
+  }
+}

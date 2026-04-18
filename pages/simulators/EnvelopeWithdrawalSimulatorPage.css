@@ -1,0 +1,54 @@
+.withdrawal-summary {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.withdrawal-summary-main {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.withdrawal-summary-main h2 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  letter-spacing: -0.03em;
+}
+
+.withdrawal-summary-main p {
+  margin: 0;
+  max-width: 760px;
+}
+
+.withdrawal-summary-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.withdrawal-reading-box {
+  margin-top: 12px;
+}
+
+.withdrawal-reading-label {
+  color: var(--muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 940px) {
+  .withdrawal-summary-main {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .withdrawal-summary-badges {
+    justify-content: flex-start;
+  }
+}
